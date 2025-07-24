@@ -9,13 +9,15 @@ This is a simple RESTful API built using Flask and SQLite. It allows users to cr
 2. Activate the environment:
 >> .\env\Scripts\activate
 3. Install the dependencies:
->> pip install -r requirements.txt
+    Flask
+    Flask_SQLAlchemy
 4. Run the database setup file:
 >> python create_db.py
 5. Start the Flask server:
 >> python app.py
 
 ## API Endpoints
+All endpoints tested using Postman
 
 ### Base URL:
 http://127.0.0.1:5000/
@@ -26,14 +28,14 @@ http://127.0.0.1:5000/
 - Returns all tasks.
 
 "POST /tasks"
-  Creates a new task. Requires JSON in this format:
+- Creates a new task. JSON format:
 {
   "title": "Task title",
   "description": "Task description"
 }
 
 "PUT /tasks/<id>"
-Updates an existing task. JSON format:
+- Updates an existing task. JSON format:
 {
   "title": "Updated title",
   "description": "Updated description",
@@ -41,9 +43,9 @@ Updates an existing task. JSON format:
 }
 
 "DELETE /tasks/<id>"
-Deletes the task with the given ID.
+- Deletes the task with the given ID.
 
-Notes:
+## Notes:
 I used Postman to test all the API routes.
 
 The database used is SQLite and the file is named database.db.
